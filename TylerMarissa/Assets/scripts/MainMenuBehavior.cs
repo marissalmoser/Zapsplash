@@ -30,7 +30,7 @@ public class MainMenuBehavior : MonoBehaviour
         SceneManager.LoadScene(1);
         Debug.Log("Start Level");
     }
-
+    
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene(0);

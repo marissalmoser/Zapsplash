@@ -21,18 +21,21 @@ public class DoorBehavior : MonoBehaviour
     [SerializeField] private float targetLoc1x = 0, targetLoc1y = 0;
     [SerializeField] private float targetLoc2x = 0, targetLoc2y = 0;
     [SerializeField] private float CamTargetLocX = 0, CamTargetLocY = 0;
-    private void Start(){
+    private void Start()
+    {
         doorLocation = new Vector2(transform.position.x, transform.position.y);
         targetLoc1 = new Vector2(targetLoc1x, targetLoc1y);
         targetLoc2 = new Vector2(targetLoc2x, targetLoc2y);
         camScript = GameObject.Find("Main Camera").GetComponent<CameraBehavior>();
     }
-    public void GoThroughDoor(GameObject player, GameObject otherPlayer) {
+    public void GoThroughDoor(GameObject player, GameObject otherPlayer) 
+    {
         if (player.GetComponent<PlayerBehavior>().stunned || otherPlayer.GetComponent<PlayerBehavior>().stunned)
         {
             // display "HEY dont leave them behind :("
         }
-        else {
+        else 
+        {
             playerScript = player.GetComponent<PlayerBehavior>();
             playerScript.MovePlayer(targetLoc1);
             playerScript = otherPlayer.GetComponent<PlayerBehavior>();
