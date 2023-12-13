@@ -28,7 +28,7 @@ public class MainMenuBehavior : MonoBehaviour
     public void StartLevel()
     {
         SceneManager.LoadScene(1);
-        Debug.Log("Start Level");
+        //Debug.Log("Start Level");
     }
     
     public void ReturnToMainMenu()

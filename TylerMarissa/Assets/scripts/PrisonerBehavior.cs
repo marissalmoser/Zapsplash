@@ -23,7 +23,7 @@ public class PrisonerBehavior : MonoBehaviour
     }
     public void FreePrisoner() {
         gameObject.SetActive(false);
-        print("im free!!");
+        //print("im free!!");
         gameManagerScript.prisonersFreed++;
     }
 }
